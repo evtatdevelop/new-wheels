@@ -52,27 +52,27 @@
   </h1>
 
   <section class="page-tools">
-
+    <h2>Filters and Sorting</h2>
     <div class="page-tools__filters filters">
       Selected Filters:
       <ul class="filters__list">
         <li class="filters__item">
           Continental
-          <button class="filters__closer">Remove</button>
+          <button type="button" class="filters__closer">Remove</button>
         </li>
       </ul>
     </div>
 
     <div class="page-tool__sorting sorting">
       Sort by:
-      <button class="sorting__button">
+      <button type="button" class="sorting__button">
         Popularity
       </button>
       <ul class="sorting__list">
         <li class="sorting__item sorting__item--current">
           <label for="pop" class="sorting__label">
             Popularity
-            <input type="radio" name="sort" value="Popularity" id="pop" class="sorting__radio">
+            <input type="radio" name="sort" value="Popularity" id="pop" class="sorting__radio" checked>
           </label>
         </li>
         <li class="sorting__item">
@@ -103,11 +103,117 @@
     </div>
   </section>
 
-  <section class="page-bestsellers"></section>
+  <section class="page-bests">
+    <h2>Bestsellers</h2>
+
+    <div class="page-bests__item">
+      <h3 class="page-bests__item-name">Premium Bestseller</h3>
+      <form action="" class="page-bests__form best-form" id="js_1">
+
+        <input type="hidden" name="good_id" value="1">
+
+        <div class="best-form__element presentation">
+          <img src="" alt="" class="presentation__main">
+          <img src="" alt="" class="presentation__second">
+        </div>
+
+        <div class="best-form__element best-name">
+          <h4 class="best-name__title">Continental - Contiecocontact 5</h4>
+        </div>
+
+        <div class="best-form__element approved"></div>
+
+        <p class="best-form__element options">
+            205/55 R16 H<br>SUV
+        </p>
+
+        <p class="best-form__element stock stock--instock">
+          Stock <!--  stock__content--fewleft  stock__content--backaweek!  -->
+        </p>
+
+        <div class="best-form__element price">
+          <label class="price__title">Price</label>
+          <span class="price__currency">₪</span>
+          <input type="text" name="price" value="340" class="price__value" readonly>
+        </div>
+
+        <p class="best-form__element total">
+          Total
+          <span class="total__currency">₪</span>
+          <span class="total__value">1,360</span>
+        </p>
+
+        <div class="best-form__element clicker">
+          <button type="button" class="clicker__button">&ndash;</button>
+          <input type="text" name="number" value="4" class="clicker__value">
+          <button type="button" class="clicker__button">+</button>
+        </div>
+
+        <button type="submit" name="tocart" class="best-form__element button button--tocart button--large" aria-label="Add to cart">
+        <!-- button--notify -->
+        <!-- button--small -->
+        submit
+        </button>
+
+      </form>
+    </div>
+
+    <div class="page-bests__item">
+      <h3 class="page-bests__item-name">Economy Bestseller</h3>
+      <form action="" class="page-bests__form best-form" id="js_2">
+
+        <input type="hidden" name="good_id" value="2">
+
+        <div class="best-form__element presentation">
+          <img src="" alt="" class="presentation__main">
+          <img src="" alt="" class="presentation__second">
+        </div>
+
+        <div class="best-form__element best-name">
+          <h4 class="best-name__title">Continental - Contiecocontact 5</h4>
+        </div>
+
+        <div class="best-form__element approved"></div>
+
+        <p class="best-form__element options">
+            205/55 R16 H<br>SUV
+        </p>
+
+        <p class="best-form__element stock stock--instock">
+          Stock <!--  stock__content--fewleft  stock__content--backaweek!  -->
+        </p>
+
+        <div class="best-form__element price">
+          <label class="price__title">Price</label>
+          <span class="price__currency">₪</span>
+          <input type="text" name="price" value="340" class="price__value" readonly>
+        </div>
+
+        <p class="best-form__element total">
+          Total
+          <span class="total__currency">₪</span>
+          <span class="total__value">1,360</span>
+        </p>
+
+        <div class="best-form__element clicker">
+          <button type="button" class="clicker__button">&ndash;</button>
+          <input type="text" name="number" value="4" class="clicker__value">
+          <button type="button" class="clicker__button">+</button>
+        </div>
+
+        <button type="submit" name="tocart" class="best-form__element button button--tocart button--large" aria-label="Add to cart">
+        <!-- button--notify -->
+        <!-- button--small -->
+        submit
+        </button>
+
+      </form>
+    </div>
+  </section>
 
   <section class="page-goods"></section>
 
-  <button class="page-more-results">Load More Results</button>
+  <button type="button" class="page-more-results">Load More Results</button>
 
 </body>
 </html>
