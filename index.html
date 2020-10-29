@@ -6,6 +6,108 @@
   <title>Recommended Products</title>
 </head>
 <body>
+  <header class="page-header">
+    <a href="" class="page-header__settings settings">Settings</a>
+
+    <form action="" class="page-header__search search">
+      <input type="text" class="search__request" placeholder="Search">
+      <a href="" class="search__button">Search</a>
+    </form>
+
+    <nav class="page-header__navigation">
+      <ul class="main-nav">
+        <li class="main-nav__item main-nav__item--account">
+          Account
+
+          <ul class="account-nav">
+            <li class="account-nav__item">
+              <a href="" class="account-nav__link">Account</a>
+            </li>
+            <li class="account-nav__item">
+              <a href="" class="account-nav__link">Call Us</a>
+            </li>
+            <li class="account-nav__item">
+              <a href="" class="account-nav__link">Give Feedback</a>
+            </li>
+            <li class="account-nav__item log-in-out">
+              <a href="" class="account-nav__link">Log Out</a>
+            </li>
+          </ul>
+
+        </li>
+
+        <li class="main-nav__item main-nav__item--orders">
+          <a href="" class="main-nav__link">Orders</a>
+        </li>
+
+        <li class="main-nav__item main-nav__item--cart main-nav__item--cart--notempty">
+          <a href="" class="main-nav__link">Cart</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <h1 class="page-name">
+    Recommended Products
+  </h1>
+
+  <section class="page-tools">
+
+    <div class="page-tools__filters filters">
+      Selected Filters:
+      <ul class="filters__list">
+        <li class="filters__item">
+          Continental
+          <button class="filters__closer">Remove</button>
+        </li>
+      </ul>
+    </div>
+
+    <div class="page-tool__sorting sorting">
+      Sort by:
+      <button class="sorting__button">
+        Popularity
+      </button>
+      <ul class="sorting__list">
+        <li class="sorting__item sorting__item--current">
+          <label for="pop" class="sorting__label">
+            Popularity
+            <input type="radio" name="sort" value="Popularity" id="pop" class="sorting__radio">
+          </label>
+        </li>
+        <li class="sorting__item">
+          <label for="low_price" class="sorting__label">
+            Lowest Price
+            <input type="radio" name="sort" value="Lowest Price" id="low_price" class="sorting__radio">
+          </label>
+        </li>
+        <li class="sorting__item">
+          <label for="most_stock" class="sorting__label">
+            Most Stock
+            <input type="radio" name="sort" value="Most Stock" id="most_stock" class="sorting__radio">
+          </label>
+        </li>
+        <li class="sorting__item">
+          <label for="model_az" class="sorting__label">
+            Model A - Z
+            <input type="radio" name="sort" value="Model A - Z" id="model_az" class="sorting__radio">
+          </label>
+        </li>
+        <li class="sorting__item">
+          <label for="code_no" class="sorting__label">
+            Code No.
+            <input type="radio" name="sort" value="Code No." id="code_no" class="sorting__radio">
+          </label>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="page-bestsellers"></section>
+
+  <section class="page-goods"></section>
+
+  <button class="page-more-results">Load More Results</button>
 
 </body>
 </html>
