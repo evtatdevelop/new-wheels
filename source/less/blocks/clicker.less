@@ -1,2 +1,45 @@
 // clicker
 
+.clicker {
+  display: flex;
+  width: 120px;
+  &--ln {
+      width: 125px;
+  }
+  &--xl {
+      width: 126px;
+  }
+}
+.clicker__button {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border: 1px solid @color-mild;
+  background-color: @color-block-bg;
+  cursor: pointer;
+  &--minus {
+    margin-right: auto;
+    background: url(../img/minus_ico.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  &--plus {
+    margin-left: auto;
+    background: url(../img/plus_ico.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  span {
+    .visually-hidden;
+  }
+}
+.clicker__value {
+  height: 40px;
+  min-width: 40px;
+  flex-grow: 1;
+  background-color: @color-mild-light;
+  font: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+}
