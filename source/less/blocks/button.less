@@ -4,29 +4,79 @@
   height: 40px;
   border-radius: 20px;
   border: 2px solid @color-elements-bg;
+
   &--lg {
     width: 152px;
-    background-position: 20px center;
+    background-position: 15px center;
+    &--tocart {
+      background-color: @color-elements-bg;
+      background-image: url(../img/cart_ico.svg);
+      background-repeat: no-repeat;
+      &::before {
+        content: "Add to Cart";
+      }
+    }
+    &--notify {
+      background-color: @color-block-bg;
+      background-image: url(../img/notify_ico.svg);
+      background-repeat: no-repeat;
+      &::before {
+        content: "Notify Me!";
+      }
+    }
   }
+
   &--md {
     width: 135px;
     background-position: 20px center;
+    &--tocart {
+      background-color: @color-elements-bg;
+      background-image: url(../img/cart_ico.svg);
+      background-repeat: no-repeat;
+      &::before {
+        content: "Add to Cart";
+      }
+    }
+    &--notify {
+      background-color: @color-block-bg;
+      background-image: url(../img/notify_ico.svg);
+      background-repeat: no-repeat;
+      &::before {
+        content: "Notify Me!";
+      }
+    }
   }
+
   &--sm {
     width: 77px;
     background-position: center center;
+    &--tocart {
+      background-color: @color-elements-bg;
+      background-image: url(../img/cart_ico.svg);
+      background-repeat: no-repeat;
+    }
+    &--notify {
+      background-color: @color-block-bg;
+      background-image: url(../img/notify_ico.svg);
+      background-repeat: no-repeat;
+    }
   }
-  &--tocart {
-    background-color: @color-elements-bg;
-    background-image: url(../img/cart_ico.svg);
-    background-repeat: no-repeat;
-
-  }
-  &--notify {
-    background-color: @color-block-bg;
-    background-image: url(../img/notify_ico.svg);
-    background-repeat: no-repeat;
-  }
+  // &--tocart {
+  //   background-color: @color-elements-bg;
+  //   background-image: url(../img/cart_ico.svg);
+  //   background-repeat: no-repeat;
+  //   &::before {
+  //     content: "Add to Cart";
+  //   }
+  // }
+  // &--notify {
+  //   background-color: @color-block-bg;
+  //   background-image: url(../img/notify_ico.svg);
+  //   background-repeat: no-repeat;
+  //   &::before {
+  //     content: "Notify Me!";
+  //   }
+  // }
   span {
     .visually-hidden;
   }
