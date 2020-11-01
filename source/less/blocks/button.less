@@ -1,6 +1,7 @@
 // submit button
 
 .button {
+  position: relative;
   height: 40px;
   border-radius: 20px;
   border: 2px solid @color-elements-bg;
@@ -11,38 +12,64 @@
     &--tocart {
       background-color: @color-elements-bg;
       background-image: url(../img/cart_ico.svg);
+      background-size: auto 21px;
       background-repeat: no-repeat;
       &::before {
+        position: absolute;
+        font-size: 16px;
+        font-weight: 500;
         content: "Add to Cart";
+        left: 50px;
+        top: 9px;
       }
     }
     &--notify {
       background-color: @color-block-bg;
       background-image: url(../img/notify_ico.svg);
+      background-size: auto 20px;
       background-repeat: no-repeat;
       &::before {
+        position: absolute;
+        font-size: 16px;
+        font-weight: 500;
         content: "Notify Me!";
+        left: 50px;
+        top: 9px;
       }
     }
   }
 
   &--md {
     width: 135px;
-    background-position: 20px center;
+    background-position: 10px center;
+    font-size: 14px;
+    font-weight: @font-bolt;
     &--tocart {
       background-color: @color-elements-bg;
       background-image: url(../img/cart_ico.svg);
+      background-size: auto 20px;
       background-repeat: no-repeat;
       &::before {
+        position: absolute;
+        font-size: 14px;
+        font-weight: 500;
         content: "Add to Cart";
+        left: 45px;
+        top: 9px;
       }
     }
     &--notify {
       background-color: @color-block-bg;
       background-image: url(../img/notify_ico.svg);
+      background-size: auto 18px;
       background-repeat: no-repeat;
       &::before {
+        position: absolute;
+        font-size: 14px;
+        font-weight: 500;
         content: "Notify Me!";
+        left: 50px;
+        top: 10px;
       }
     }
   }
@@ -53,30 +80,17 @@
     &--tocart {
       background-color: @color-elements-bg;
       background-image: url(../img/cart_ico.svg);
+      background-size: auto 20px;
       background-repeat: no-repeat;
     }
     &--notify {
       background-color: @color-block-bg;
       background-image: url(../img/notify_ico.svg);
+      background-size: auto 18px;
       background-repeat: no-repeat;
     }
   }
-  // &--tocart {
-  //   background-color: @color-elements-bg;
-  //   background-image: url(../img/cart_ico.svg);
-  //   background-repeat: no-repeat;
-  //   &::before {
-  //     content: "Add to Cart";
-  //   }
-  // }
-  // &--notify {
-  //   background-color: @color-block-bg;
-  //   background-image: url(../img/notify_ico.svg);
-  //   background-repeat: no-repeat;
-  //   &::before {
-  //     content: "Notify Me!";
-  //   }
-  // }
+
   span {
     .visually-hidden;
   }
