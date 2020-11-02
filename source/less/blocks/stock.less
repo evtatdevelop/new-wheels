@@ -1,2 +1,56 @@
 // stock
 
+.stock {
+    position: relative;
+    font-size: 16px;
+      &::before {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 14px;
+        height: 14px;
+        border-radius: 7px;
+        left: 43px;
+        top: 3px;
+      }
+      &::after {
+        position: absolute;
+        display: block;
+        // width: 150px;
+        font-size: 14px;
+        font-weight: 600;
+        top: 25px;
+      }
+      &--instock {
+          margin-top: 2px;
+          &::before {
+              background: url(../img/instock_ico.svg) no-repeat;
+              background-color: @color-success;
+              background-position: center, center;
+          }
+      }
+      &--fewleft {
+        height: 45px;
+        &::before {
+              background: url(../img/fewleft_ico.svg) no-repeat;
+              background-color: @color-warning;
+              background-position: center, center;
+          }
+          &::after {
+              content: "8 Tires Left";
+              color: @color-font-default;
+          }
+      }
+      &--backaweek {
+        height: 45px;
+          &::before {
+              background: url(../img/backaweek.svg) no-repeat;
+              background-color: @color-danger;
+              background-position: center, center;
+          }
+          &::after {
+              content: "Back in 1 week!";
+              color: @color-font-danger;
+          }
+      }
+  }
