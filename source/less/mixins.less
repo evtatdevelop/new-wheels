@@ -10,4 +10,18 @@
   padding: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
+};
+
+// Подключение шрифтов
+.font(@family, @filename: @family, @weight: normal, @style: normal) {
+  @font-face {
+      font-family: @family;
+      src: local(@family);
+      // src:url('../fonts/@{filename}.eot');
+      // src:url('../fonts/@{filename}.eot?#iefix') format('embedded-opentype'),
+      // url('../fonts/@{filename}.woff') format('woff'),
+      // url('../fonts/@{filename}.ttf') format('truetype');
+      // font-weight: @weight;
+      // font-style: @style;
+  };
+};
