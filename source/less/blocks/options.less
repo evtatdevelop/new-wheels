@@ -1,2 +1,26 @@
 // options
 
+.options {
+  font-size: @size-font-sm;
+  &--xs { /*catalog tablet-p, mobile*/
+    p {
+      margin-bottom: 1px;
+    }
+  }
+  &--sm { /*best tablet-p, mobile*/
+    p {
+      margin-bottom: 6px;
+    }
+  }
+  &--md {  /*best tablet-l*/
+    p {
+      margin-bottom: 7px;
+    }
+  }
+  &--lg {  /*catalog tablet-l, dt*/
+    p {
+      font-size: @size-font-md;
+      margin-bottom: 4px;
+    }
+  }
+}
