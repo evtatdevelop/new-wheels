@@ -1,109 +1,114 @@
 // main navigation
 
-  .main-nav {
-      display: flex;
-      // width: 190px;
-      // justify-content: space-between;
-      &--lg {
-        .main-nav__item {
-          width: 60px;
-          height: 80px;
-        }
-        .main-nav__item--account {
-          position: relative;
-          &::before {
-            position: absolute;
-            display: block;
-            content: "Account";
-            left: 8px;
-          }
-          &:hover {
-            & .account-nav {
-              top: 5px;
-              left: -79px;
-            }
-          }
-        }
-        .main-nav__item--orders {
-          position: relative;
-          &::before {
-            position: absolute;
-            display: block;
-            content: "Orders";
-            left: 10px;
-          }
-        }
-        .main-nav__item--cart {
-          position: relative;
-          &::before {
-            position: absolute;
-            display: block;
-            content: "Cart";
-            left: 20px;
-          }
-        }
-      }
-  }
-
-  .main-nav__item {
-    cursor: pointer;
-    // outline: 1px solid red;
-    width: 48px;
-    height: 56px;
-    color: @color-font-default;
-    opacity: 0.4;
-    font-weight: 500;
-    font-size: 14px;
-    padding-top: 49px;
-    text-align: center;
-    .vh {
-      .visually-hidden;
-    }
-    &>a {
-      width: 100%;
-      height: 100%;
-      color: @color-font-default;
-    }
-    &:hover {
-      opacity: 1;
-      transition: opacity 0.5s;
-    }
-    &--account {
-      position: relative;
-      background: url(../img/account_ico.svg) no-repeat;
+.main-nav {
+  display: flex;
+  position: relative;
+  &--lg {
+    .main-nav__item {
+      width: 60px;
+      height: 80px;
       background-position: center 20px;
-
+    }
+    .main-nav__item {
+      position: relative;
+      &::before {
+        position: absolute;
+        display: block;
+      }
+    }
+    .main-nav__item--account {
+      &::before {
+        content: "Account";
+        left: 8px;
+      }
       &:hover {
         & .account-nav {
-          top: -18px;
-          opacity: 1;
-          transition: opacity 0.5s;
+          top: 5px;
+          left: -78px;
         }
       }
     }
-
-    &--orders {
-      background: url(../img/orders_ico.svg) no-repeat;
-      background-position: center 21px;
+    .main-nav__item--orders {
+      &::before {
+        content: "Orders";
+        left: 10px;
+      }
     }
+    .main-nav__item--cart {
+      &::before {
+        content: "Cart";
+        left: 20px;
+      }
+      &--notempty {
+        &+.not-empty {
+          top: 16px;
+          right: 10px;
+        }
+      }
+    }
+  }
+}
 
-    &--cart {
-      position: relative;
-      background: url(../img/cart_ico.svg) no-repeat;
-      background-position: center 20px;
-
-      &--issordered {
+.main-nav__item {
+  cursor: pointer;
+  width: 48px;
+  height: 56px;
+  color: @color-font-default;
+  opacity: 0.4;
+  font-weight: 500;
+  font-size: 14px;
+  padding-top: 49px;
+  text-align: center;
+  .vh {
+    .visually-hidden;
+  }
+  &>a {
+    width: 100%;
+    height: 100%;
+    color: @color-font-default;
+  }
+  &:hover {
+    opacity: 1;
+    transition: opacity 0.5s;
+  }
+  &--account {
+    position: relative;
+    background: url(../img/account_ico.svg) no-repeat;
+    // background-position: center 20px;
+    background-position: center center;
+    margin-right: 5px;
+    &:hover {
+      & .account-nav {
+        top: -18px;
+        opacity: 1;
+        transition: opacity 0.5s;
+      }
+    }
+  }
+  &--orders {
+    background: url(../img/orders_ico.svg) no-repeat;
+    // background-position: center 21px;
+    background-position: center center;
+  }
+  &--cart {
+    position: relative;
+    background: url(../img/cart_ico.svg) no-repeat;
+    // background-position: center 20px;
+    background-position: center center;
+    &--notempty {
+      &+.not-empty {
         width: 13px;
         height: 13px;
         position: absolute;
         background-color: @color-elements-bg;
         border-radius: 50%;
-        top: 16px;
-        left: 37px;
+        top: 11px;
+        right: 4px;
         border: 2px solid @color-body-bg;
       }
     }
   }
+}
 
 
 // account navigation
