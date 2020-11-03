@@ -2,24 +2,26 @@
 
 .main-nav {
   display: flex;
-  position: relative;
   &--lg {
-    .main-nav__item {
-      width: 60px;
-      height: 80px;
-      background-position: center 20px;
-    }
-    .main-nav__item {
-      position: relative;
-      &::before {
-        position: absolute;
-        display: block;
+    .main-nav__item{
+      .main-nav__link {
+        width: 60px;
+        height: 80px;
+        background-position: center 20px;
+        position: relative;
+        &::before {
+          position: absolute;
+          display: block;
+        }
       }
     }
+
     .main-nav__item--account {
-      &::before {
-        content: "Account";
-        left: 8px;
+      .main-nav__link {
+        &::before {
+          content: "Account";
+          left: 8px;
+        }
       }
       &:hover {
         & .account-nav {
@@ -29,20 +31,24 @@
       }
     }
     .main-nav__item--orders {
-      &::before {
-        content: "Orders";
-        left: 10px;
+      .main-nav__link {
+        &::before {
+          content: "Orders";
+          left: 10px;
+        }
       }
     }
     .main-nav__item--cart {
-      &::before {
-        content: "Cart";
-        left: 20px;
+      .main-nav__link {
+        &::before {
+          content: "Cart";
+          left: 20px;
+        }
       }
       &--notempty {
-        &+.not-empty {
-          top: 16px;
-          right: 10px;
+        &::after {
+          top: 15px;
+          right: 8px;
         }
       }
     }
@@ -50,32 +56,34 @@
 }
 
 .main-nav__item {
-  cursor: pointer;
-  width: 48px;
-  height: 56px;
-  color: @color-font-default;
-  opacity: 0.4;
-  font-weight: 500;
-  font-size: 14px;
-  padding-top: 49px;
-  text-align: center;
   .vh {
     .visually-hidden;
   }
-  &>a {
-    width: 100%;
-    height: 100%;
+  .main-nav__link {
+    display: block;
+    width: 48px;
+    height: 56px;
+    color: @color-font-default;
+    opacity: 0.4;
+    font-weight: 500;
+    font-size: 14px;
+    padding-top: 49px;
+    text-align: center;
     color: @color-font-default;
   }
   &:hover {
-    opacity: 1;
-    transition: opacity 0.5s;
+    .main-nav__link {
+      opacity: 1;
+      transition: opacity 0.5s;
+    }
   }
+
   &--account {
     position: relative;
-    background: url(../img/account_ico.svg) no-repeat;
-    // background-position: center 20px;
-    background-position: center center;
+    .main-nav__link {
+      background: url(../img/account_ico.svg) no-repeat;
+      background-position: center center;
+    }
     margin-right: 5px;
     &:hover {
       & .account-nav {
@@ -85,18 +93,23 @@
       }
     }
   }
+
   &--orders {
-    background: url(../img/orders_ico.svg) no-repeat;
-    // background-position: center 21px;
-    background-position: center center;
+    .main-nav__link {
+      background: url(../img/orders_ico.svg) no-repeat;
+      background-position: center center;
+    }
   }
+
   &--cart {
     position: relative;
-    background: url(../img/cart_ico.svg) no-repeat;
-    // background-position: center 20px;
-    background-position: center center;
+    .main-nav__link {
+      background: url(../img/cart_ico.svg) no-repeat;
+      background-position: center center;
+    }
     &--notempty {
-      &+.not-empty {
+      &::after {
+        content: "";
         width: 13px;
         height: 13px;
         position: absolute;
