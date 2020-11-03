@@ -1,2 +1,51 @@
 // serach
 
+.search {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  &--md {
+    .search__request {
+      width: 400px;
+    }
+  }
+
+  &--sm {
+    .search__request {
+      width: 284px;
+    }
+  }
+
+  &--xs {
+    .search__request {
+      display: none;
+    }
+  }
+}
+  .search__request {
+      width: 525px;
+      height: 40px;
+      border: 1px solid @color-mild;
+      border-radius: 20px;
+      padding: 0 20px;
+      font: inherit;
+      color: @color-font-default;
+      font-size: 14px;
+  }
+  .sarche__button {
+      position: absolute;
+      width: 36px;
+      height: 36px;
+      border-radius: 18px;
+      background-color: @color-elements-bg;
+      right: 2px;
+      cursor: pointer;
+      span {
+        .visually-hidden;
+      }
+      background-image: url(../img/search_ico.svg);
+      background-size: auto 20px;
+      background-repeat: no-repeat;
+      background-position: center center;
+  }
