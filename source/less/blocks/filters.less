@@ -1,2 +1,38 @@
 // filters
 
+.filters {
+  display: flex;
+  align-items: center;
+  font-size: @size-font-md;
+  color: @color-font-lighter;
+}
+
+.filters__list {
+  display: flex;
+  max-width: 1000px;
+  flex-wrap: wrap;
+  margin-left: 3px;
+  .filters__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 131px;
+    height: 32px;
+    border: 1px solid @color-font-default;
+    border-radius: 16px;
+    padding: 0 15px;
+    background-color: @color-mild-light;
+    margin-left: 5px;
+      .filters__closer {
+        background-image: url('../img/filtercloser_ico.svg');
+        width: 16px;
+        height: 16px;
+        margin-left: 12px;
+        cursor: pointer;
+        span {
+          .visually-hidden;
+        }
+      }
+    }
+  }
