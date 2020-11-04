@@ -1,2 +1,41 @@
 // product name
 
+.product-name {
+  display: block;
+  // width: 150px;
+  &--xl { /*best dt*/
+    h4 {
+      font-size: @size-font-xl;
+      padding-bottom: -3px;
+    }
+  }
+
+  &--lg { /*best tablet-l*/
+    h4 {
+      font-size: @size-font-lg;
+      padding-bottom: -5px;
+    }
+  }
+
+  &--md { /*best tablet-p mobile , catalog dt tablet-l*/
+    h4 {
+      font-size: @size-font-md;
+      padding-bottom: -5px;
+      line-height: 1.5;
+    }
+  }
+
+  &--sm { /*catalog tablet-p mobile*/
+    h4 {
+      font-size: @size-font-md;
+      padding-bottom: -5px;
+      line-height: 20px;
+    }
+  }
+}
+
+.product-name__title {
+  text-decoration: underline;
+  font-weight: 900;
+  letter-spacing: -.4px;
+}
