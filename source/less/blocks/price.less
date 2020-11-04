@@ -1,2 +1,67 @@
 // price
 
+.price {
+  display: flex;
+  justify-content: space-between;
+  &--lg { /*best dt, catalog dt tablet-s*/
+    width: 76px;
+    .price__title {
+      font-size: 15px;
+    }
+    .price__value {
+      font-size: 15px;
+    }
+    .price__currency {
+      font-size: 15px;
+    }
+  }
+
+  &--md { /*best tablet-s*/
+    width: 72px;
+    .price__title {
+      font-size: @size-font-sm;
+    }
+    .price__value {
+      font-size: @size-font-sm;
+    }
+    .price__currency {
+      font-size: @size-font-sm;
+    }
+  }
+
+  &--sm { /*best tablet-p mobile*/
+    width: 32px;
+    flex-direction: column;
+    .price__title {
+      font-size: @size-font-sm;
+      margin-bottom: 6px;
+    }
+    .price__value {
+      font-size: @size-font-sm;
+    }
+    .price__currency {
+      font-size: @size-font-sm;
+    }
+  }
+
+  &--xs { /*catalog tablet-p mobile*/
+    width: 32px;
+    flex-direction: column;
+    .price__title {
+      font-size: @size-font-sm;
+      margin-bottom: 2px;
+    }
+    .price__value {
+      font-size: @size-font-sm;
+    }
+    .price__currency {
+      font-size: @size-font-sm;
+    }
+  }
+}
+
+.price__container {
+  font-size: 0;
+}
+
+
