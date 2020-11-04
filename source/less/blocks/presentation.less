@@ -1,2 +1,56 @@
 // presentation
 
+.presentation {
+  position: relative;
+  &--lg {
+    width: 135px;
+    height: 130px;
+    .presentation__main {
+      width: 123px;
+      height: 123px;
+    }
+    .presentation__second {
+      width: 41px;
+      height: 73px;
+    }
+  }
+
+  &--md {
+    width: 111px;
+    height: 104px;
+    .presentation__main {
+      width: 105px;
+      height: 105px;
+    }
+    .presentation__second {
+      width: 35px;
+      height: 62px;
+    }
+  }
+
+  &--sm {
+    width: 104px;
+    height: 130px;
+    .presentation__main {
+      width: 103px;
+      height: 103px;
+    }
+    .presentation__second {
+      width: 28px;
+      height: 55px;
+    }
+  }
+}
+
+.presentation__main {
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.presentation__second {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
