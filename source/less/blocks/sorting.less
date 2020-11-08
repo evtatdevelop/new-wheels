@@ -1,2 +1,42 @@
 // sorting
 
+.sorting {
+  // outline: 1px solid red;
+  display: flex;
+  font-size: 16px;
+}
+.sorting__name {
+  margin-top: 8px;
+}
+
+.sorting__list {
+  // outline: 1px solid blue;
+  margin-left: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+  &--hidden {
+    box-shadow: none;
+    .sorting__item:not(.sorting__item--current) {
+      .visually-hidden;
+    }
+    .sorting__item--current {
+      .sorting__label {
+        background-color: transparent;
+        border: 1px solid @color-font-default;
+        border-radius: 16px;
+      }
+    }
+  }
+}
+
+.sorting__label {
+  display: flex;
+  align-items: center;
+  width: 115px;
+  height: 32px;
+  background-color: @color-block-bg;
+  cursor: pointer;
+  padding-left: 15px
+}
+.sorting__radio {
+  .visually-hidden;
+}
